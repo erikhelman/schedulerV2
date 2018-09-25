@@ -1,0 +1,61 @@
+{
+  "name": "schedulerv2-fe",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "client": "vue-cli-service serve",
+    "serve": "concurrently \"vue-cli-service serve\" \"npm run server\"",
+    "server": "cd .. && export FLASK_DEBUG=1 && export FLASK_APP=home.py && flask run",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "moment": "^2.22.2",
+    "register-service-worker": "^1.0.0",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "vuelidate": "^0.7.4",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-beta.15",
+    "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
+    "@vue/cli-plugin-pwa": "^3.0.0-beta.15",
+    "@vue/cli-service": "^3.0.0-beta.15",
+    "@vue/eslint-config-prettier": "^3.0.0-rc.3",
+    "babel-plugin-component": "^1.1.1",
+    "concurrently": "^3.6.0",
+    "vue-template-compiler": "^2.5.16"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/prettier"
+    ],
+    "rules": {
+      "vue/attribute-hyphenation": [
+        "error",
+        "always"
+      ]
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
